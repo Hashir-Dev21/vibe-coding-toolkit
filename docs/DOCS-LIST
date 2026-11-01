@@ -1,0 +1,13 @@
+Yeh lijiye sabhi important documentation files ke exact filenames aur unka mukhtasir maqsad:
+
+* **`PRD.md`** – Product Requirements Document (Project ka vision, goals, aur features)
+* **`TRD.md`** – Technical Requirements Document (Tech stack aur technical constraints)
+* **`SYSTEM-ARCHITECTURE.md`** – System Architecture (Modules aur data flow diagrams)
+* **`DATABASE-SCHEMA.md`** – Database Schema & ERD (Tables, relations, aur columns)
+* **`API-DOCS.md`** – API Specification (Endpoints, request/response payloads)
+* **`ADR.md`** – Architectural Decision Records (Important technical decisions ki history)
+* **`RULES.md` (ya `.cursorrules`)** – AI & Coding Standards (AI assistants ke liye rules)
+* **`TASKS-CHECKLIST.md`** – Project Roadmap & Tasks (Sprint aur todo check list)
+* **`README.md`** – Main Repository Entry (Setup, installation, aur project introduction)
+* **`CONTRIBUTING.md`** – Contribution Guidelines (Branching aur PR rules)
+* **`CHANGELOG.md`** – Version History (Updates aur releases ka record)
