@@ -1,13 +1,62 @@
-Yeh lijiye sabhi important documentation files ke exact filenames aur unka mukhtasir maqsad:
+# Essential Software Documentation Files Reference
 
-* **`PRD.md`** – Product Requirements Document (Project ka vision, goals, aur features)
-* **`TRD.md`** – Technical Requirements Document (Tech stack aur technical constraints)
-* **`SYSTEM-ARCHITECTURE.md`** – System Architecture (Modules aur data flow diagrams)
-* **`DATABASE-SCHEMA.md`** – Database Schema & ERD (Tables, relations, aur columns)
-* **`API-DOCS.md`** – API Specification (Endpoints, request/response payloads)
-* **`ADR.md`** – Architectural Decision Records (Important technical decisions ki history)
-* **`RULES.md` (ya `.cursorrules`)** – AI & Coding Standards (AI assistants ke liye rules)
-* **`TASKS-CHECKLIST.md`** – Project Roadmap & Tasks (Sprint aur todo check list)
-* **`README.md`** – Main Repository Entry (Setup, installation, aur project introduction)
-* **`CONTRIBUTING.md`** – Contribution Guidelines (Branching aur PR rules)
-* **`CHANGELOG.md`** – Version History (Updates aur releases ka record)
+Here is a complete reference list of all the essential software documentation files, along with their core purpose and why they are critical for professional repositories.
+
+## 1. Product & Architecture Core Files
+
+* **`PRD.md` (Product Requirements Document)**
+  * **Purpose:** Defines the high-level scope, target users, problem statement, core features (MVP vs. future), and key success metrics of the project. It serves as the single source of truth for what is being built and why.
+
+* **`TRD.md` (Technical Requirements Document)**
+  * **Purpose:** Outlines the specific technical specifications, technology stack versions, security standards, non-functional requirements (scalability, latency targets), and environment constraints required to build the product.
+
+* **`SYSTEM-ARCHITECTURE.md`**
+  * **Purpose:** Describes the internal structural design of the application. It includes system diagrams (Mermaid.js charts), folder directory trees, modular dependencies, and step-by-step data request flows.
+
+* **`DATABASE-SCHEMA.md`**
+  * **Purpose:** Details the database architecture. It features Entity-Relationship Diagrams (ERD), complete table specifications (columns, data types, primary/foreign keys), indexing strategies, and data optimization guidelines.
+
+* **`API-DOCS.md` (API Specification)**
+  * **Purpose:** Provides complete documentation for backend HTTP endpoints. It specifies HTTP methods, routes, headers, request payload formats, response JSON schemas, status codes, and error payloads.
+
+* **`ADR.md` (Architectural Decision Records)**
+  * **Purpose:** Tracks significant technical decisions made during the project lifecycle (e.g., choosing FastAPI over Django or Supabase over raw PostgreSQL), along with the context, alternatives considered, and consequences.
+
+## 2. AI & Workflow Automation
+
+* **`RULES.md` (or `.cursorrules`)**
+  * **Purpose:** Defines code quality standards, design principles (SOLID, type safety), error-handling rules, and constraints specifically meant to instruct AI coding assistants (like Cursor, Claude, or Copilot) during vibe coding sessions.
+
+* **`TASKS-CHECKLIST.md`**
+  * **Purpose:** Serves as a granular, actionable execution roadmap divided into phases/sprints. It breaks down project requirements into trackable work items.
+
+## 3. Repository & Operations Documentation
+
+* **`README.md`**
+  * **Purpose:** The primary entry point for the repository. It introduces the project, lists tech stack badges, provides quick-start installation steps, and highlights main features.
+
+* **`SECURITY.md`**
+  * **Purpose:** Establishes the security policy of the project. It specifies supported software versions and gives clear instructions on how to privately and responsibly disclose vulnerabilities.
+
+* **`DEPLOYMENT.md` (Runbook)**
+  * **Purpose:** Provides step-by-step instructions for deploying the application to production environments (Docker, Railway, AWS, VPS), including domain configuration, reverse proxy setup, and environment variable setup.
+
+* **`TROUBLESHOOTING.md`**
+  * **Purpose:** A technical FAQ guide that addresses common installation bugs, runtime execution errors, database connection failures, and dependency conflicts with immediate solutions.
+
+## 4. Open-Source & Community Standards
+
+* **`CONTRIBUTING.md`**
+  * **Purpose:** Guides external developers on how to contribute to the project. It outlines Git branch naming conventions, commit message standards, and Pull Request (PR) submission workflows.
+
+* **`CODE_OF_CONDUCT.md`**
+  * **Purpose:** Establishes standards of behavior and community expectations for contributors to maintain a respectful, inclusive, and harassment-free environment.
+
+* **`SUPPORT.md`**
+  * **Purpose:** Directs users and contributors to appropriate support channels (GitHub Discussions, Discord, email) for general help, bug reporting, or feature suggestions.
+
+* **`CHANGELOG.md`**
+  * **Purpose:** Chronologically logs changes, enhancements, bug fixes, and breaking updates made across different version releases (`v1.0.0`, `v1.1.0`).
+
+* **`LICENSE`**
+  * **Purpose:** A legal file defining the usage, modification, and distribution rights of the software (e.g., MIT, Apache 2.0).
