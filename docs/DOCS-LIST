@@ -1,6 +1,6 @@
 # Essential Software Documentation Files Reference
 
-Here is a complete reference list of all the essential software documentation files, along with their core purpose and why they are critical for professional repositories.
+Here is a complete reference list of all essential software documentation files, along with their core purpose and why they are critical for professional repositories.
 
 ## 1. Product & Architecture Core Files
 
@@ -22,13 +22,22 @@ Here is a complete reference list of all the essential software documentation fi
 * **`ADR.md` (Architectural Decision Records)**
   * **Purpose:** Tracks significant technical decisions made during the project lifecycle (e.g., choosing FastAPI over Django or Supabase over raw PostgreSQL), along with the context, alternatives considered, and consequences.
 
-## 2. AI, Agents & Workflow Automation
+## 2. AI, Machine Learning & Agent Systems
 
 * **`RULES.md` (or `.cursorrules`)**
   * **Purpose:** Defines code quality standards, design principles (SOLID, type safety), error-handling rules, and constraints specifically meant to instruct AI coding assistants (like Cursor, Claude, or Copilot) during vibe coding sessions.
 
 * **`AGENT-ARCHITECTURE.md` (Agent Architecture & Workflow)**
   * **Purpose:** Outlines the decision-making loop of the agent (e.g., ReAct, Plan-and-Execute, Reflexion), prompt orchestration strategies, agent execution graphs (LangGraph/AutoGen state machines), and multi-agent delegation logic.
+
+* **`MULTI-AGENT-ORCHESTRATION.md` (Swarm / Graph Architecture)**
+  * **Purpose:** Outlines the high-level orchestration model (e.g., Hierarchical, Sequential, Consensus-based, or Router-Worker), communication protocol between agents, delegation pathways, and how the shared global state is updated across agent steps.
+
+* **`AGENT-ROLES-REGISTRY.md` (Crew & Agent Specifications)**
+  * **Purpose:** Defines the granular specification for every individual agent in the system—including its distinct role, specific goal, backstory/persona, allowed tools, access level, and expected input/output schemas.
+
+* **`STATE-GRAPH-SPEC.md` (State Machine & Transition Rules)**
+  * **Purpose:** Details the underlying state graph (e.g., using LangGraph or custom state machine). It documents graph nodes (agents/functions), conditional edges (transition rules based on agent decisions), loop detection, and human-in-the-loop interruption points.
 
 * **`TOOLS-SPEC.md` (Tool & Function Definitions)**
   * **Purpose:** Documents all external tools, APIs, code execution sandboxes, and database access functions exposed to the agent. It details function signatures, JSON schemas, input validation constraints, and failure-handling protocols.
@@ -42,6 +51,12 @@ Here is a complete reference list of all the essential software documentation fi
 * **`KNOWLEDGE-BASE.md` (RAG & Data Ingestion Pipeline)**
   * **Purpose:** Documents the data pipeline for Retrieval-Augmented Generation (RAG). It details data ingestion sources, text chunking strategies, embedding models, vector store indexing, and retrieval hybrid-search mechanisms.
 
+* **`MODEL-CARD.md`**
+  * **Purpose:** Essential for repositories involving trained machine learning or fine-tuned LLM models. It documents the model's architecture, training data sources, evaluation metrics, known limitations, biases, and intended use cases.
+
+* **`DATA-DICTIONARY.md`**
+  * **Purpose:** Provides a comprehensive catalog of all datasets, tables, features, and variables used in data-heavy applications, detailing data types, units of measurement, business meanings, and validation rules.
+
 * **`EVALS-AND-BENCHMARKS.md` (Evaluation & Testing Framework)**
   * **Purpose:** Defines metrics and test suites used to benchmark agent accuracy, hallucination rates, tool-calling precision, latency, and cost per execution run using frameworks like Ragas, DeepEval, or custom benchmark datasets.
 
@@ -51,21 +66,51 @@ Here is a complete reference list of all the essential software documentation fi
 * **`TASKS-CHECKLIST.md`**
   * **Purpose:** Serves as a granular, actionable execution roadmap divided into phases/sprints. It breaks down project requirements into trackable work items.
 
-## 3. Repository & Operations Documentation
+## 3. Workflow & Automation Architecture
+
+* **`WORKFLOW-BLUEPRINT.md` (Node Logic & Architecture)**
+  * **Purpose:** Outlines the overall purpose of the automation workflow, specified Triggers (e.g., Webhook, Cron schedule), Node types used (HTTP Request, Code, AI, IF/ELSE), and data flow pathways between nodes. It also references exports or links to workflow `.json` files (e.g., n8n, Make).
+
+* **`CREDENTIALS-AND-INTEGRATIONS.md` (API Keys & Auth Setup)**
+  * **Purpose:** Documents all third-party service credentials required to run automation workflows (e.g., OpenAI API keys, Telegram Bot tokens, Supabase keys, Gmail OAuth). Specifies required credentials and standard naming conventions in automation engines.
+
+* **`ERROR-HANDLING-AND-RETRIES.md` (Failure & Alert Workflows)**
+  * **Purpose:** Defines fallback mechanics for workflow failures (e.g., API timeouts or database downtime). Outlines error-handling node behavior, alerting pathways (Slack, Email), and automated retry policies.
+
+## 4. Frontend & Design Systems
+
+* **`DESIGN-SYSTEM.md` (or `UI-TOKENS.md`)**
+  * **Purpose:** Serves as a style and component guide for frontend developers and designers. It documents color palettes, typography scales, spacing tokens, and reusable UI component usage rules to maintain visual consistency.
+
+## 5. Testing & Quality Assurance
+
+* **`TESTING-STRATEGY.md` (or `QA-PLAN.md`)**
+  * **Purpose:** Outlines the quality assurance framework, covering unit testing frameworks (PyTest/Jest), integration testing, end-to-end (E2E) testing tools (Playwright/Cypress), and minimum code coverage requirements for pull requests.
+
+## 6. DevOps, SRE & Operations Documentation
 
 * **`README.md`**
   * **Purpose:** The primary entry point for the repository. It introduces the project, lists tech stack badges, provides quick-start installation steps, and highlights main features.
 
-* **`SECURITY.md`**
-  * **Purpose:** Establishes the security policy of the project. It specifies supported software versions and gives clear instructions on how to privately and responsibly disclose vulnerabilities.
-
-* **`DEPLOYMENT.md` (Runbook)**
+* **`DEPLOYMENT.md`**
   * **Purpose:** Provides step-by-step instructions for deploying the application to production environments (Docker, Railway, AWS, VPS), including domain configuration, reverse proxy setup, and environment variable setup.
+
+* **`RUNBOOK.md` (or `INCIDENT-RESPONSE.md`)**
+  * **Purpose:** A step-by-step operational guide for system administrators and SREs on how to handle production outages, server crashes, database rollbacks, and emergency scaling during high-traffic incidents.
+
+* **`PERFORMANCE-BENCHMARKS.md` (or `LOAD-TESTING.md`)**
+  * **Purpose:** Documents the results of load tests, stress tests, and latency benchmarks (e.g., handling 10k requests/sec), establishing performance boundaries and bottleneck analyses.
 
 * **`TROUBLESHOOTING.md`**
   * **Purpose:** A technical FAQ guide that addresses common installation bugs, runtime execution errors, database connection failures, and dependency conflicts with immediate solutions.
 
-## 4. Open-Source & Community Standards
+* **`SECURITY.md`**
+  * **Purpose:** Establishes the security policy of the project. It specifies supported software versions and gives clear instructions on how to privately and responsibly disclose vulnerabilities.
+
+## 7. Enterprise, Compliance & Community Standards
+
+* **`COMPLIANCE.md` (or `PRIVACY-POLICY.md`)**
+  * **Purpose:** Details how the application complies with legal and security standards like GDPR, HIPAA, or SOC2, focusing on data masking, encryption at rest, and user data deletion requests.
 
 * **`CONTRIBUTING.md`**
   * **Purpose:** Guides external developers on how to contribute to the project. It outlines Git branch naming conventions, commit message standards, and Pull Request (PR) submission workflows.
